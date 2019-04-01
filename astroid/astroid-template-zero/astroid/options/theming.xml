@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+   <fields name="params">
+      <fieldset icon="fa fa-paint-brush" label="Theming" name="astroid_theming" addfieldpath="/libraries/astroid/framework/fields" order="11">
+         <field type="astroidgroup" name="colors" title="ASTROID_OPTIONS_COLOURS" description="Select colors for Body" />
+         <field type="astroidgroup" name="base_options" title="Base Options" description="" />
+         <field type="astroidgroup" name="grid_spacing" title="Spacing &amp; Grid" description="Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you\'d update the $grid-breakpoints and $container-max-widths." />
+         <field type="astroidgroup" name="common_padding_border" title="Common Padding &amp; Border" description="Define common padding and border radius sizes and more." />
+         
+         <field astroidgroup="colors" name="theme_colors_heading" type="astroidheading" title="All Colors" description="All colors available in Bootstrap 4"></field>
+         <field astroidgroup="colors" name="theme_blue" type="astroidcolor" large="true" label="Blue" default="#007bff" description=""></field>
+         <field astroidgroup="colors" name="theme_indigo" type="astroidcolor" large="true" label="Indigo" default="#6610f2" description=""></field>
+         <field astroidgroup="colors" name="theme_purple" type="astroidcolor" large="true" label="Purple" default="#6f42c1" description=""></field>
+         <field astroidgroup="colors" name="theme_pink" type="astroidcolor" large="true" label="Pink" default="#e83e8c" description=""></field>
+         <field astroidgroup="colors" name="theme_red" type="astroidcolor" large="true" label="Red" default="#dc3545" description=""></field>
+         <field astroidgroup="colors" name="theme_orange" type="astroidcolor" large="true" label="Orange" default="#fd7e14" description=""></field>
+         <field astroidgroup="colors" name="theme_yellow" type="astroidcolor" large="true" label="Yellow" default="#ffc107" description=""></field>
+         <field astroidgroup="colors" name="theme_green" type="astroidcolor" large="true" label="Green" default="#28a745" description=""></field>
+         <field astroidgroup="colors" name="theme_teal" type="astroidcolor" large="true" label="Teal" default="#20c997" description=""></field>
+         <field astroidgroup="colors" name="theme_cyan" type="astroidcolor" large="true" label="Cyan" default="#17a2b8" description=""></field>
+         <field astroidgroup="colors" name="theme_white" type="astroidcolor" large="true" label="White" default="#fff" description=""></field>
+         <field astroidgroup="colors" name="theme_gray100" type="astroidcolor" large="true" label="Light Gray" default="#f8f9fa" description=""></field>
+         <field astroidgroup="colors" name="theme_gray600" type="astroidcolor" large="true" label="Gray" default="#6c757d" description=""></field>
+         <field astroidgroup="colors" name="theme_gray800" type="astroidcolor" large="true" label="Dark Gray" default="#343a40" description=""></field>
+         
+         <field astroidgroup="colors" name="theme_scheme_heading" type="astroidheading" title="Theme Colors" description="Use a subset of all colors to create a smaller color palette for generating color schemes"></field>
+         
+         <field astroidgroup="colors" description="" name="theme_primary" type="astroidlist" class="form-control" default="blue" label="Primary" bootstrap-color="true" />
+         <field astroidgroup="colors" description="" name="theme_secondary" type="astroidlist" class="form-control" default="gray600" label="Secondary" bootstrap-color="true" />
+         <field astroidgroup="colors" description="" name="theme_success" type="astroidlist" class="form-control" default="green" label="Success" bootstrap-color="true" />
+         <field astroidgroup="colors" description="" name="theme_info" type="astroidlist" class="form-control" default="cyan" label="Info" bootstrap-color="true" />
+         
+         <field astroidgroup="colors" description="" name="theme_warning" type="astroidlist" class="form-control" default="yellow" label="Warning" bootstrap-color="true" />
+         <field astroidgroup="colors" description="" name="theme_danger" type="astroidlist" class="form-control" default="red" label="Danger" bootstrap-color="true" />
+         
+         <field astroidgroup="colors" description="" name="theme_light" type="astroidlist" class="form-control" default="gray100" label="Light" bootstrap-color="true" />
+         <field astroidgroup="colors" description="" name="theme_dark" type="astroidlist" class="form-control" default="gray800" label="Dark" bootstrap-color="true" />
+         
+         <field astroidgroup="base_options" description="" name="theme_body_bg" type="astroidcolor" large="true" class="form-control" default="#fff" label="Body Background" />          
+         <field astroidgroup="base_options" description="" name="theme_body_color" type="astroidcolor" large="true" class="form-control" default="#212529" label="Body Color" />
+         <field astroidgroup="base_options" description="" name="theme_link_color" type="astroidcolor" large="true" class="form-control" default="#007bff" label="Link Color" />
+         <field astroidgroup="base_options" description="" name="theme_link_hover_color" type="astroidcolor" large="true" class="form-control" default="#0056b3" label="Link Color" />
+
+         <field astroidgroup="grid_spacing" name="theme_grid_heading" type="astroidheading" title="Grid breakpoints" description="Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries."></field>
+         
+         <field astroidgroup="grid_spacing" name="theme_grid_breakpoints_sm" type="astroidrange" min="320" max="767" step="1" postfix="px" default="576" label="Grid breakpoint - SM" />
+         
+         <field astroidgroup="grid_spacing" name="theme_grid_breakpoints_md" type="astroidrange" min="768" max="991" step="1" postfix="px" default="768" label="Grid breakpoint - MD" />
+         
+         <field astroidgroup="grid_spacing" name="theme_grid_breakpoints_lg" type="astroidrange" min="992" max="1199" step="1" postfix="px" default="992" label="Grid breakpoint - LG" />
+         
+         <field astroidgroup="grid_spacing" name="theme_grid_breakpoints_xl" type="astroidrange" min="1200" max="1500" step="1" postfix="px" default="1200" label="Grid breakpoint - XL" />
+         
+         <field astroidgroup="grid_spacing" name="theme_container_width_heading" type="astroidheading" title="Grid containers" description="Define the maximum width of .container for different screen sizes."></field>
+         
+         <field astroidgroup="grid_spacing" name="theme_container_max_sm" type="astroidrange" min="320" max="719" step="1" postfix="px" default="540" label="Grid breakpoint - SM" />
+         
+         <field astroidgroup="grid_spacing" name="theme_container_max_md" type="astroidrange" min="720" max="959" step="1" postfix="px" default="720" label="Grid breakpoint - MD" />
+         
+         <field astroidgroup="grid_spacing" name="theme_container_max_lg" type="astroidrange" min="960" max="1139" step="1" postfix="px" default="960" label="Grid breakpoint - LG" />
+        
+         <field astroidgroup="grid_spacing" name="theme_container_max_xl" type="astroidrange" min="1140" max="1500" step="1" postfix="px" default="1140" label="Grid breakpoint - XL" />
+         
+         <field astroidgroup="grid_spacing" name="theme_spacing_heading" type="astroidheading" title="Spacer" description="Control the default spacing of most Bootstrap elements by modifying $spacer."></field>
+         
+         <field astroidgroup="grid_spacing" name="theme_spacer" type="astroidrange" min=".1" max="3" step=".1" postfix="rem" default="1" label="Spacer" />
+         
+         <field astroidgroup="grid_spacing" name="theme_gutter_width" type="astroidrange" min="0" max="100" step="1" postfix="px" default="30" label="Specify the width of the gutters." />
+         
+         <field astroidgroup="common_padding_border" name="theme_line_height_lg" type="astroidrange" min=".1" max="3" step=".1" postfix="" default="1.5" label="Line Height - LG" />
+         <field astroidgroup="common_padding_border" name="theme_line_height_sm" type="astroidrange" min=".1" max="3" step=".1" postfix="" default="1.5" label="Line Height - SM" />
+         <field astroidgroup="common_padding_border" name="theme_border_width" type="astroidrange" min="0" max="5" step="1" postfix="px" default="1" label="Border Width" />
+         <field astroidgroup="common_padding_border" name="theme_border_color" type="astroidcolor" default="#dee2e6" label="Border Color" />
+         
+         <field astroidgroup="common_padding_border" name="theme_border_radius" type="astroidrange" min="0" max="5" step=".05" postfix="rem" default=".25" label="Border Radius" />
+         
+         <field astroidgroup="common_padding_border" name="theme_border_radius_lg" type="astroidrange" min="0" max="5" step=".05" postfix="rem" default=".30" label="Border Radius - LG" />
+         
+         <field astroidgroup="common_padding_border" name="theme_border_radius_sm" type="astroidrange" min="0" max="5" step=".05" postfix="rem" default=".20" label="Border Radius - SM" />
+         
+         <field astroidgroup="common_padding_border" name="theme_rounded_pill" type="astroidrange" min="20" max="80" step="1" postfix="rem" default="50" label="Rounded Pill" />
+         
+         
+      </fieldset>
+   </fields>
+</form>

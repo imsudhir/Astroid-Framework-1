@@ -458,11 +458,15 @@ class AstroidFrameworkTemplate {
          foreach ($scss_files as $scss) {
             $name .= md5_file($scss['basepath']);
          }
+
+         $variables = $this->getThemeVariables();
+         $name .= serialize($variables);
+
          $cssname = 'style-' . md5($name);
          if (!file_exists($template_directory . 'css/' . $cssname . '.css')) {
             //ini_set('xdebug.max_nesting_level', 3000);
             AstroidFrameworkHelper::clearCache($this->template);
-            AstroidFrameworkHelper::compileSass($template_directory . 'scss', $template_directory . 'css', 'style.scss', $cssname . '.css');
+            AstroidFrameworkHelper::compileSass($template_directory . 'scss', $template_directory . 'css', 'style.scss', $cssname . '.css', $variables);
          }
          return $cssname . '.css';
       } else {
@@ -483,6 +487,58 @@ class AstroidFrameworkTemplate {
          }
          return $cssname . '.css';
       }
+   }
+
+   public function getThemeVariables() {
+      $variables = [];
+      $variables['blue'] = $this->params->get('theme_blue', '#007bff');
+      $variables['indigo'] = $this->params->get('theme_indigo', '#6610f2');
+      $variables['purple'] = $this->params->get('theme_purple', '#6f42c1');
+      $variables['pink'] = $this->params->get('theme_pink', '#e83e8c');
+      $variables['red'] = $this->params->get('theme_red', '#dc3545');
+      $variables['orange'] = $this->params->get('theme_orange', '#fd7e14');
+      $variables['yellow'] = $this->params->get('theme_yellow', '#ffc107');
+      $variables['green'] = $this->params->get('theme_green', '#28a745');
+      $variables['teal'] = $this->params->get('theme_teal', '#20c997');
+      $variables['cyan'] = $this->params->get('theme_cyan', '#17a2b8');
+      $variables['white'] = $this->params->get('theme_white', '#fff');
+      $variables['gray100'] = $this->params->get('theme_gray100', '#f8f9fa');
+      $variables['gray600'] = $this->params->get('theme_gray600', '#6c757d');
+      $variables['gray800'] = $this->params->get('theme_gray800', '#343a40');
+
+
+      $primary = $this->params->get('theme_primary', 'blue');
+      $variables['primary'] = $variables[$primary];
+
+      $secondary = $this->params->get('theme_secondary', 'gray600');
+      $variables['secondary'] = $variables[$secondary];
+
+      $success = $this->params->get('theme_success', 'green');
+      $variables['success'] = $variables[$success];
+
+      $info = $this->params->get('theme_info', 'cyan');
+      $variables['info'] = $variables[$info];
+
+      $warning = $this->params->get('theme_warning', 'yellow');
+      $variables['warning'] = $variables[$warning];
+
+      $danger = $this->params->get('theme_danger', 'red');
+      $variables['danger'] = $variables[$danger];
+
+      $light = $this->params->get('theme_light', 'gray100');
+      $variables['light'] = $variables[$light];
+
+      $dark = $this->params->get('theme_dark', 'gray800');
+      $variables['dark'] = $variables[$dark];
+
+
+      $link_color = $this->params->get('theme_link_color', '#007bff');
+      $variables['link-color'] = $link_color;
+
+      $link_hover_color = $this->params->get('theme_link_hover_color', '#0056b3');
+      $variables['link-hover-color'] = $link_hover_color;
+
+      return $variables;
    }
 
    public function getColors() {

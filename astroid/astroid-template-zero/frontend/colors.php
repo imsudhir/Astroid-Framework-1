@@ -157,7 +157,7 @@ if (!empty($icon_color)) {
 ?>
 
 <?php
-   $template->addStyledeclaration(implode('', $body_styles));
+   //$template->addStyledeclaration(implode('', $body_styles));
    $template->addStyledeclaration(implode('', $header_styles));
    $template->addStyledeclaration(implode('', $main_menu_styles));
    $template->addStyledeclaration(implode('', $dropdown_styles));

@@ -167,6 +167,24 @@ class AstroidFrameworkConstants {
            'three_dots' => ['label' => 'Three Dots', 'image' => 'preloader/three-dots.svg'],
        ]
    ];
+   public static $bootstrap_colors = [
+       'white' => 'White',
+       'black' => 'Black',
+       'blue' => 'Blue',
+       'indigo' => 'Indigo',
+       'purple' => 'Purple',
+       'pink' => 'Pink',
+       'red' => 'Red',
+       'orange' => 'Orange',
+       'yellow' => 'Yellow',
+       'green' => 'Green',
+       'teal' => 'Teal',
+       'cyan' => 'Cyan',
+       'white' => 'White',
+       'gray100' => 'Light Gray',
+       'gray600' => 'Gray',
+       'gray800' => 'Gray Dark'
+   ];
    public static $social_profiles = [
        ['title' => 'Behance', 'link' => '', 'icons' => ['fab fa-behance', 'fab fa-behance-square'], 'color' => '#2252FF', 'enabled' => false, 'icon' => 'fab fa-behance'],
        ['title' => 'Dribbble', 'link' => '', 'icons' => ['fab fa-dribbble', 'fab fa-dribbble-square'], 'color' => '#F10A77', 'enabled' => false, 'icon' => 'fab fa-dribbble'],
@@ -254,12 +272,12 @@ class AstroidFrameworkConstants {
            'code' => '<div class="sk-cube-grid"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div>',
        ],
        'bouncing-loader' => [
-        'name' => 'bouncing-loader',
-        'code' => '<div class="bouncing-loader"><div></div><div></div><div></div></div>',
+           'name' => 'bouncing-loader',
+           'code' => '<div class="bouncing-loader"><div></div><div></div><div></div></div>',
        ],
        'donut' => [
-        'name' => 'donut',
-        'code' => '<div class="donut"></div>',
+           'name' => 'donut',
+           'code' => '<div class="donut"></div>',
        ],
    ];
    public static $layout_grids = [
@@ -275,4 +293,13 @@ class AstroidFrameworkConstants {
        [3, 3, 3, 3],
        [2, 2, 2, 2, 2, 2]
    ];
+
+   public function getConstant($variable) {
+      if (isset($this->{"$" . $variable})) {
+         return $this->{"$" . $variable};
+      } else {
+         return null;
+      }
+   }
+
 }

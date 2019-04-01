@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 extract($displayData);
 jimport('joomla.application.module.helper');
 $position = $params->get('position', '');
-
+$template = AstroidFramework::getTemplate();
 $beforeContent = $template->getAstroidContent($position, 'before');
 if (!empty($beforeContent)) {
    echo $beforeContent;
